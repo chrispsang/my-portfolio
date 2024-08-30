@@ -158,75 +158,75 @@ function App() {
       githubLink: "https://github.com/chrispsang/Beauty-Skincare.git",
       siteLink: "https://github.com/chrispsang/Beauty-Skincare.git",
     },
-    {
-      title: "Chris's Arcade",
-      shortDescription:
-        "A collection of classic mini-games including Brick Breaker and Snake.",
-      description:
-        "Chris's Arcade is a nostalgic collection of classic mini-games like Brick Breaker and Snake. I enjoyed working on this project as it allowed me to blend creativity with technical skills. The user authentication and leaderboard features provided a challenging yet rewarding experience, directly impacting user engagement and competition. Firebase made real-time score tracking seamless, enhancing the overall gaming experience.",
-      keyLearnings: [
-        "Enhanced my skills in front-end development and game design by integrating a real-time database and user authentication using Firebase.",
-      ],
-      techStack: ["JavaScript", "HTML", "CSS", "Firebase"],
-      screenshots: ["/arcadegame1.png", "/arcadegame2.png"],
-      githubLink: "https://github.com/chrispsang/Arcade-games",
-      siteLink: "https://chrispsang.github.io/Arcade-games",
-    },
-    {
-      title: "Weather App",
-      shortDescription:
-        "A full-stack application providing current weather conditions and 5-day forecasts.",
-      description:
-        "The Weather App is a comprehensive full-stack web application that enables users to search for current weather conditions and view 5-day forecasts for any city. This project was particularly satisfying as it allowed me to dive deep into full-stack development, from front-end user interface design to backend API integration. Deploying the application with Docker was especially intriguing, providing hands-on experience with containerization. The ability to save favorite locations added a personalized touch that enhances user experience.",
-      keyLearnings: [
-        "Strengthened my understanding of full-stack development by building a weather application with React.js and Node.js, and gained valuable experience in deploying applications using Docker.",
-      ],
-      techStack: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MySQL",
-        "OpenWeatherMap API",
-        "Docker",
-      ],
-      screenshots: ["/weatherapp.png"],
-      githubLink: "https://github.com/chrispsang/Weather-App",
-    },
+    // {
+    //   title: "Chris's Arcade",
+    //   shortDescription:
+    //     "A collection of classic mini-games including Brick Breaker and Snake.",
+    //   description:
+    //     "Chris's Arcade is a nostalgic collection of classic mini-games like Brick Breaker and Snake. I enjoyed working on this project as it allowed me to blend creativity with technical skills. The user authentication and leaderboard features provided a challenging yet rewarding experience, directly impacting user engagement and competition. Firebase made real-time score tracking seamless, enhancing the overall gaming experience.",
+    //   keyLearnings: [
+    //     "Enhanced my skills in front-end development and game design by integrating a real-time database and user authentication using Firebase.",
+    //   ],
+    //   techStack: ["JavaScript", "HTML", "CSS", "Firebase"],
+    //   screenshots: ["/arcadegame1.png", "/arcadegame2.png"],
+    //   githubLink: "https://github.com/chrispsang/Arcade-games",
+    //   siteLink: "https://chrispsang.github.io/Arcade-games",
+    // },
+    // {
+    //   title: "Weather App",
+    //   shortDescription:
+    //     "A full-stack application providing current weather conditions and 5-day forecasts.",
+    //   description:
+    //     "The Weather App is a comprehensive full-stack web application that enables users to search for current weather conditions and view 5-day forecasts for any city. This project was particularly satisfying as it allowed me to dive deep into full-stack development, from front-end user interface design to backend API integration. Deploying the application with Docker was especially intriguing, providing hands-on experience with containerization. The ability to save favorite locations added a personalized touch that enhances user experience.",
+    //   keyLearnings: [
+    //     "Strengthened my understanding of full-stack development by building a weather application with React.js and Node.js, and gained valuable experience in deploying applications using Docker.",
+    //   ],
+    //   techStack: [
+    //     "React.js",
+    //     "Node.js",
+    //     "Express.js",
+    //     "MySQL",
+    //     "OpenWeatherMap API",
+    //     "Docker",
+    //   ],
+    //   screenshots: ["/weatherapp.png"],
+    //   githubLink: "https://github.com/chrispsang/Weather-App",
+    // },
 
-    {
-      title: "Healthcare Data Analysis Project",
-      shortDescription:
-        "Analyzing synthetic patient data to improve healthcare outcomes using machine learning.",
-      description:
-        "This project focused on analyzing synthetic patient data to uncover trends and make predictions that could enhance healthcare outcomes. By employing various machine learning models, I explored hidden patterns in the data, contributing to better healthcare decisions. This project deepened my expertise in data exploration, preprocessing, and the application of machine learning techniques in healthcare analytics.",
-      keyLearnings: [
-        "Developed expertise in data exploration, preprocessing, and model building, and gained insights into the application of machine learning in healthcare analytics.",
-      ],
-      techStack: [
-        "Python",
-        "Jupyter Notebook",
-        "Scikit-learn",
-        "Pandas",
-        "Matplotlib",
-      ],
-      screenshots: ["/feature_importance.png", "/correlation_heatmap.png"],
-      githubLink: "https://github.com/chrispsang/HealthCare-DataAnalysis.git",
-    },
-    {
-      title: "Churn Analysis Project",
-      shortDescription:
-        "Predicting customer churn for a subscription service using data analysis and machine learning.",
-      description:
-        "This project involved analyzing customer data to identify patterns and predict churn in a subscription-based service. By building and evaluating predictive models, I uncovered key factors driving customer churn, offering actionable insights for retention strategies. The project also emphasized visual storytelling through data, using Tableau to create an insightful dashboard.",
-      keyLearnings: [
-        "Enhanced skills in data preprocessing, exploratory data analysis, and model evaluation, with a strong emphasis on visual storytelling using Tableau.",
-      ],
-      techStack: ["Python", "Pandas", "Scikit-learn", "Tableau"],
-      screenshots: ["/Dashboard.jpg"],
-      githubLink: "https://github.com/chrispsang/CustomerChurnAnalysis.git",
-      siteLink:
-        "https://public.tableau.com/views/ChurnAnalysisDashboard_17225321250850/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    },
+    // {
+    //   title: "Healthcare Data Analysis Project",
+    //   shortDescription:
+    //     "Analyzing synthetic patient data to improve healthcare outcomes using machine learning.",
+    //   description:
+    //     "This project focused on analyzing synthetic patient data to uncover trends and make predictions that could enhance healthcare outcomes. By employing various machine learning models, I explored hidden patterns in the data, contributing to better healthcare decisions. This project deepened my expertise in data exploration, preprocessing, and the application of machine learning techniques in healthcare analytics.",
+    //   keyLearnings: [
+    //     "Developed expertise in data exploration, preprocessing, and model building, and gained insights into the application of machine learning in healthcare analytics.",
+    //   ],
+    //   techStack: [
+    //     "Python",
+    //     "Jupyter Notebook",
+    //     "Scikit-learn",
+    //     "Pandas",
+    //     "Matplotlib",
+    //   ],
+    //   screenshots: ["/feature_importance.png", "/correlation_heatmap.png"],
+    //   githubLink: "https://github.com/chrispsang/HealthCare-DataAnalysis.git",
+    // },
+    // {
+    //   title: "Churn Analysis Project",
+    //   shortDescription:
+    //     "Predicting customer churn for a subscription service using data analysis and machine learning.",
+    //   description:
+    //     "This project involved analyzing customer data to identify patterns and predict churn in a subscription-based service. By building and evaluating predictive models, I uncovered key factors driving customer churn, offering actionable insights for retention strategies. The project also emphasized visual storytelling through data, using Tableau to create an insightful dashboard.",
+    //   keyLearnings: [
+    //     "Enhanced skills in data preprocessing, exploratory data analysis, and model evaluation, with a strong emphasis on visual storytelling using Tableau.",
+    //   ],
+    //   techStack: ["Python", "Pandas", "Scikit-learn", "Tableau"],
+    //   screenshots: ["/Dashboard.jpg"],
+    //   githubLink: "https://github.com/chrispsang/CustomerChurnAnalysis.git",
+    //   siteLink:
+    //     "https://public.tableau.com/views/ChurnAnalysisDashboard_17225321250850/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    // },
     {
       title: "Library Management System",
       shortDescription: "A Java-based library management system with a GUI.",
@@ -492,31 +492,20 @@ function App() {
           <h2>About Me</h2>
           <img src="profile.jpg" alt="Profile" className="profile-pic" />
           <p style={{ marginBottom: "20px" }}>
-            Hello, and welcome to my portfolio! My passion for technology began
-            in high school when I first explored{" "}
-            <strong>Computer Science</strong>. This initial exposure ignited a
-            desire to explore the field further, leading me to pursue my studies
-            at <strong>York University</strong>. Throughout my academic journey,
-            I’ve developed a deep understanding of various{" "}
-            <strong> programming languages, frameworks, and tools</strong>. My
-            projects reflect my enthusiasm for creating user-centric
+            Welcome to my portfolio! My interest in technology began in high
+            school with <strong>Computer Science</strong>, leading me to pursue my
+            studies at <strong>York University</strong>. I have experience with{" "}
+            various <strong>programming languages, frameworks, and tools</strong> such
+            as <strong>JavaScript, Java, React, Angular, and Node.js</strong>.
+            My projects reflect my enthusiasm for creating user-centric
             applications that solve real-world problems, from personalized
             wellness trackers to dynamic e-commerce platforms.
           </p>
           <p style={{ marginBottom: "20px" }}>
-            I’m driven by a curiosity to continuously explore{" "}
-            <strong>new technologies</strong> and improve my skills. I enjoy
-            taking on challenges that push me to think{" "}
-            <strong>critically and creatively</strong>, and I’m always eager to{" "}
-            <strong>collaborate</strong> with others who share a similar passion
-            for technology.
-          </p>
-          <p style={{ marginBottom: "20px" }}>
-            Beyond my tech interests, I find joy and balance in dance and music.
-            Playing the piano and exploring different dance styles are my
-            creative outlets, allowing me to express myself artistically. This
-            blend of technical skills and artistic pursuits keeps me creative
-            and motivated, both in my academic projects and in my personal life.
+            I’m always excited to explore <strong>new technologies</strong> and
+            improve my skills. I enjoy tackling challenges that push me to think{" "}
+            <strong>critically and creatively</strong> and love collaborating
+            with others who share a passion for technology.
           </p>
         </div>
       </div>
