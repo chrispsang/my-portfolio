@@ -100,7 +100,7 @@ function App() {
         "Enhanced my expertise in backend development by integrating third-party payment systems and implementing secure, role-based access controls.",
       ],
       techStack: ["React", "NestJS", "PostgreSQL", "Stripe"],
-      screenshots: ["/bookingsystem1.png", "/bookingsystem2.png"],
+      screenshots: ["bookingsystem1.png", "bookingsystem2.png"],
       githubLink: "https://github.com/chrispsang/Booking-System.git",
       siteLink: "https://booking-system-muqm.onrender.com/",
     },
@@ -120,7 +120,7 @@ function App() {
         "Python",
         "Chart.js",
       ],
-      screenshots: ["/wellnesswise.png"],
+      screenshots: ["wellnesswise.png"],
       githubLink: "https://github.com/chrispsang/Wellness-Wise.git",
       siteLink: "https://wellness-wise.vercel.app",
     },
@@ -172,26 +172,26 @@ function App() {
     //   githubLink: "https://github.com/chrispsang/Arcade-games",
     //   siteLink: "https://chrispsang.github.io/Arcade-games",
     // },
-    // {
-    //   title: "Weather App",
-    //   shortDescription:
-    //     "A full-stack application providing current weather conditions and 5-day forecasts.",
-    //   description:
-    //     "The Weather App is a comprehensive full-stack web application that enables users to search for current weather conditions and view 5-day forecasts for any city. This project was particularly satisfying as it allowed me to dive deep into full-stack development, from front-end user interface design to backend API integration. Deploying the application with Docker was especially intriguing, providing hands-on experience with containerization. The ability to save favorite locations added a personalized touch that enhances user experience.",
-    //   keyLearnings: [
-    //     "Strengthened my understanding of full-stack development by building a weather application with React.js and Node.js, and gained valuable experience in deploying applications using Docker.",
-    //   ],
-    //   techStack: [
-    //     "React.js",
-    //     "Node.js",
-    //     "Express.js",
-    //     "MySQL",
-    //     "OpenWeatherMap API",
-    //     "Docker",
-    //   ],
-    //   screenshots: ["/weatherapp.png"],
-    //   githubLink: "https://github.com/chrispsang/Weather-App",
-    // },
+    {
+      title: "Weather App",
+      shortDescription:
+        "A full-stack application providing current weather conditions and 5-day forecasts.",
+      description:
+        "The Weather App is a comprehensive full-stack web application that enables users to search for current weather conditions and view 5-day forecasts for any city. This project was particularly satisfying as it allowed me to dive deep into full-stack development, from front-end user interface design to backend API integration. Deploying the application with Docker was especially intriguing, providing hands-on experience with containerization. The ability to save favorite locations added a personalized touch that enhances user experience.",
+      keyLearnings: [
+        "Strengthened my understanding of full-stack development by building a weather application with React.js and Node.js, and gained valuable experience in deploying applications using Docker.",
+      ],
+      techStack: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "OpenWeatherMap API",
+        "Docker",
+      ],
+      screenshots: ["weatherapp.png"],
+      githubLink: "https://github.com/chrispsang/Weather-App",
+    },
 
     // {
     //   title: "Healthcare Data Analysis Project",
@@ -212,21 +212,21 @@ function App() {
     //   screenshots: ["/feature_importance.png", "/correlation_heatmap.png"],
     //   githubLink: "https://github.com/chrispsang/HealthCare-DataAnalysis.git",
     // },
-    // {
-    //   title: "Churn Analysis Project",
-    //   shortDescription:
-    //     "Predicting customer churn for a subscription service using data analysis and machine learning.",
-    //   description:
-    //     "This project involved analyzing customer data to identify patterns and predict churn in a subscription-based service. By building and evaluating predictive models, I uncovered key factors driving customer churn, offering actionable insights for retention strategies. The project also emphasized visual storytelling through data, using Tableau to create an insightful dashboard.",
-    //   keyLearnings: [
-    //     "Enhanced skills in data preprocessing, exploratory data analysis, and model evaluation, with a strong emphasis on visual storytelling using Tableau.",
-    //   ],
-    //   techStack: ["Python", "Pandas", "Scikit-learn", "Tableau"],
-    //   screenshots: ["/Dashboard.jpg"],
-    //   githubLink: "https://github.com/chrispsang/CustomerChurnAnalysis.git",
-    //   siteLink:
-    //     "https://public.tableau.com/views/ChurnAnalysisDashboard_17225321250850/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    // },
+    {
+      title: "Churn Analysis Project",
+      shortDescription:
+        "Predicting customer churn for a subscription service using data analysis and machine learning.",
+      description:
+        "This project involved analyzing customer data to identify patterns and predict churn in a subscription-based service. By building and evaluating predictive models, I uncovered key factors driving customer churn, offering actionable insights for retention strategies. The project also emphasized visual storytelling through data, using Tableau to create an insightful dashboard.",
+      keyLearnings: [
+        "Enhanced skills in data preprocessing, exploratory data analysis, and model evaluation, with a strong emphasis on visual storytelling using Tableau.",
+      ],
+      techStack: ["Python", "Pandas", "Scikit-learn", "Tableau"],
+      screenshots: ["Dashboard.jpg"],
+      githubLink: "https://github.com/chrispsang/CustomerChurnAnalysis.git",
+      siteLink:
+        "https://public.tableau.com/views/ChurnAnalysisDashboard_17225321250850/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    },
     {
       title: "Library Management System",
       shortDescription: "A Java-based library management system with a GUI.",
@@ -236,22 +236,22 @@ function App() {
         "Gained experience in group collaboration, applying software design principles and patterns, creating a modular codebase, and implementing automated testing to ensure system reliability.",
       ],
       techStack: ["Java", "JUnit", "Randoop", "CSV"],
-      screenshots: ["/library.png"],
+      screenshots: ["library.png"],
       githubLink: "https://github.com/chrispsang/Library-Management-System",
     },
-    {
-      title: "Restaurant Booking App Design",
-      shortDescription: "UI/UX design for a restaurant booking app.",
-      description:
-        "This project involved collaboratively designing a restaurant booking app prototype as part of a user interface course. The design process included conducting user research, creating wireframes, and iteratively refining the interface based on feedback. The project emphasized applying UI/UX principles to create an intuitive and user-friendly app design.",
-      keyLearnings: [
-        "Enhanced my understanding of user-centered design, from conducting user research to creating wireframes and mockups. Improved my ability to incorporate feedback and iteratively refine designs.",
-      ],
-      techStack: ["Figma"],
-      screenshots: ["/restaurant.png"],
-      siteLink:
-        "https://www.figma.com/design/CYCLvqAtJ7b1iT5tkxtoH2/Restaurant-Booking-App?node-id=0-1&t=q4sGhikEHVEfju3S-0",
-    },
+    // {
+    //   title: "Restaurant Booking App Design",
+    //   shortDescription: "UI/UX design for a restaurant booking app.",
+    //   description:
+    //     "This project involved collaboratively designing a restaurant booking app prototype as part of a user interface course. The design process included conducting user research, creating wireframes, and iteratively refining the interface based on feedback. The project emphasized applying UI/UX principles to create an intuitive and user-friendly app design.",
+    //   keyLearnings: [
+    //     "Enhanced my understanding of user-centered design, from conducting user research to creating wireframes and mockups. Improved my ability to incorporate feedback and iteratively refine designs.",
+    //   ],
+    //   techStack: ["Figma"],
+    //   screenshots: ["restaurant.png"],
+    //   siteLink:
+    //     "https://www.figma.com/design/CYCLvqAtJ7b1iT5tkxtoH2/Restaurant-Booking-App?node-id=0-1&t=q4sGhikEHVEfju3S-0",
+    // },
   ];
 
   const skills = {
