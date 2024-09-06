@@ -158,20 +158,20 @@ function App() {
       githubLink: "https://github.com/chrispsang/Beauty-Skincare.git",
       siteLink: "https://github.com/chrispsang/Beauty-Skincare.git",
     },
-    // {
-    //   title: "Chris's Arcade",
-    //   shortDescription:
-    //     "A collection of classic mini-games including Brick Breaker and Snake.",
-    //   description:
-    //     "Chris's Arcade is a nostalgic collection of classic mini-games like Brick Breaker and Snake. I enjoyed working on this project as it allowed me to blend creativity with technical skills. The user authentication and leaderboard features provided a challenging yet rewarding experience, directly impacting user engagement and competition. Firebase made real-time score tracking seamless, enhancing the overall gaming experience.",
-    //   keyLearnings: [
-    //     "Enhanced my skills in front-end development and game design by integrating a real-time database and user authentication using Firebase.",
-    //   ],
-    //   techStack: ["JavaScript", "HTML", "CSS", "Firebase"],
-    //   screenshots: ["/arcadegame1.png", "/arcadegame2.png"],
-    //   githubLink: "https://github.com/chrispsang/Arcade-games",
-    //   siteLink: "https://chrispsang.github.io/Arcade-games",
-    // },
+    {
+      title: "Chris's Arcade",
+      shortDescription:
+        "A collection of classic mini-games including Brick Breaker and Snake.",
+      description:
+        "Chris's Arcade is a nostalgic collection of classic mini-games like Brick Breaker and Snake. I enjoyed working on this project as it allowed me to blend creativity with technical skills. The user authentication and leaderboard features provided a challenging yet rewarding experience, directly impacting user engagement and competition. Firebase made real-time score tracking seamless, enhancing the overall gaming experience.",
+      keyLearnings: [
+        "Enhanced my skills in front-end development and game design by integrating a real-time database and user authentication using Firebase.",
+      ],
+      techStack: ["JavaScript", "HTML", "CSS", "Firebase"],
+      screenshots: ["arcadegame1.png", "arcadegame2.png"],
+      githubLink: "https://github.com/chrispsang/Arcade-games",
+      siteLink: "https://chrispsang.github.io/Arcade-games",
+    },
     {
       title: "Weather App",
       shortDescription:
