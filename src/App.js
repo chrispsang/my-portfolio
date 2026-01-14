@@ -12,6 +12,7 @@ import {
 import emailjs from "emailjs-com";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import profileImage from "./assets/profile.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -490,7 +491,7 @@ function App() {
       <div id="about" className="section about" ref={aboutRef}>
         <div data-aos="fade-up">
           <h2>About Me</h2>
-          <img src="profile.jpg" alt="Profile" className="profile-pic" />
+          <img src={profileImage} alt="Profile" className="profile-pic" />
           <p style={{ marginBottom: "20px" }}>
             Welcome to my portfolio! My interest in technology began in high
             school with <strong>Computer Science</strong>, leading me to pursue my
@@ -599,15 +600,18 @@ function App() {
               <h4>Tech Stack:</h4>
               <p>{selectedProject.techStack.join(" | ")}</p>
               <div className="screenshots">
-                {selectedProject.screenshots.map((screenshot, idx) => (
-                  <img
-                    key={idx}
-                    src={screenshot}
-                    alt={`Screenshot ${idx + 1}`}
-                    onClick={() => handleImageClick(screenshot)}
-                    className="clickable-image"
-                  />
-                ))}
+                {selectedProject.screenshots.map((screenshot, idx) => {
+                  const imagePath = `${process.env.PUBLIC_URL || ''}/${screenshot}`;
+                  return (
+                    <img
+                      key={idx}
+                      src={imagePath}
+                      alt={`Screenshot ${idx + 1}`}
+                      onClick={() => handleImageClick(imagePath)}
+                      className="clickable-image"
+                    />
+                  );
+                })}
               </div>
               <div className="modal-links">
                 {selectedProject.githubLink && (
@@ -675,7 +679,7 @@ function App() {
               <FaEnvelope size={40} />
             </a>
             <a
-              href="https://www.linkedin.com/in/christina-p-9ba2b5a0"
+              href="https://www.linkedin.com/in/christina-piangsang"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
