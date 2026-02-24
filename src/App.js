@@ -21,6 +21,9 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [navScrolled, setNavScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -33,11 +36,50 @@ function App() {
 
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
+      // Add a brief visual feedback
+      const navbar = document.querySelector('nav');
+      navbar.style.transform = 'translateX(-50%) scale(0.98)';
+      setTimeout(() => {
+        navbar.style.transform = 'translateX(-50%) scale(1)';
+      }, 150);
+      
       sectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    
+    const updateScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress((scrollTop / docHeight) * 100);
+      setNavScrolled(scrollTop > 50);
+      
+      // Determine active section
+      const sections = [
+        { name: "about", ref: aboutRef },
+        { name: "skills", ref: skillsRef },
+        { name: "projects", ref: projectsRef },
+        { name: "contact", ref: contactRef }
+      ];
+      
+      let currentSection = "";
+      sections.forEach(section => {
+        if (section.ref.current) {
+          const rect = section.ref.current.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = section.name;
+          }
+        }
+      });
+      
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', updateScroll);
+    return () => window.removeEventListener('scroll', updateScroll);
   }, []);
 
   const sendEmail = (e) => {
@@ -194,25 +236,25 @@ function App() {
       githubLink: "https://github.com/chrispsang/Weather-App",
     },
 
-    // {
-    //   title: "Healthcare Data Analysis Project",
-    //   shortDescription:
-    //     "Analyzing synthetic patient data to improve healthcare outcomes using machine learning.",
-    //   description:
-    //     "This project focused on analyzing synthetic patient data to uncover trends and make predictions that could enhance healthcare outcomes. By employing various machine learning models, I explored hidden patterns in the data, contributing to better healthcare decisions. This project deepened my expertise in data exploration, preprocessing, and the application of machine learning techniques in healthcare analytics.",
-    //   keyLearnings: [
-    //     "Developed expertise in data exploration, preprocessing, and model building, and gained insights into the application of machine learning in healthcare analytics.",
-    //   ],
-    //   techStack: [
-    //     "Python",
-    //     "Jupyter Notebook",
-    //     "Scikit-learn",
-    //     "Pandas",
-    //     "Matplotlib",
-    //   ],
-    //   screenshots: ["/feature_importance.png", "/correlation_heatmap.png"],
-    //   githubLink: "https://github.com/chrispsang/HealthCare-DataAnalysis.git",
-    // },
+    {
+      title: "Healthcare Data Analysis Project",
+      shortDescription:
+        "Analyzing synthetic patient data to improve healthcare outcomes using machine learning.",
+      description:
+        "This project focused on analyzing synthetic patient data to uncover trends and make predictions that could enhance healthcare outcomes. By employing various machine learning models, I explored hidden patterns in the data, contributing to better healthcare decisions. This project deepened my expertise in data exploration, preprocessing, and the application of machine learning techniques in healthcare analytics.",
+      keyLearnings: [
+        "Developed expertise in data exploration, preprocessing, and model building, and gained insights into the application of machine learning in healthcare analytics.",
+      ],
+      techStack: [
+        "Python",
+        "Jupyter Notebook",
+        "Scikit-learn",
+        "Pandas",
+        "Matplotlib",
+      ],
+      screenshots: ["feature_importance.png", "correlation_heatmap.png"],
+      githubLink: "https://github.com/chrispsang/HealthCare-DataAnalysis.git",
+    },
     {
       title: "Churn Analysis Project",
       shortDescription:
@@ -466,48 +508,117 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : "light-mode"}`}>
-      <nav>
-        <button onClick={() => scrollToSection(aboutRef)}>About</button>
-        <button onClick={() => scrollToSection(skillsRef)}>Skills</button>
-        <button onClick={() => scrollToSection(projectsRef)}>Projects</button>
-        <button onClick={() => scrollToSection(contactRef)}>Contact</button>
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
+      <nav className={navScrolled ? "scrolled" : ""}>
+        <div className="nav-links">
+          <button 
+            className={activeSection === "about" ? "active" : ""}
+            onClick={() => scrollToSection(aboutRef)}
+          >
+            About
+          </button>
+          <button 
+            className={activeSection === "skills" ? "active" : ""}
+            onClick={() => scrollToSection(skillsRef)}
+          >
+            Skills
+          </button>
+          <button 
+            className={activeSection === "projects" ? "active" : ""}
+            onClick={() => scrollToSection(projectsRef)}
+          >
+            Projects
+          </button>
+          <button 
+            className={activeSection === "contact" ? "active" : ""}
+            onClick={() => scrollToSection(contactRef)}
+          >
+            Contact
+          </button>
+        </div>
         <button
           onClick={toggleDarkMode}
           className="theme-toggle"
           aria-label="Toggle Dark Mode"
         >
-          {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
+          {darkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
         </button>
       </nav>
 
       <header className="header">
-        <h1>Christina Piang Sang</h1>
-        <p>
-          Full-Stack Developer | Passionate about crafting clean, efficient, and
-          impactful solutions.
-        </p>
+        <div className="header-content">
+          <div className="title-container">
+            <h1>
+              <span className="greeting">Hi, I'm</span>
+              <span className="name">Christina Piang Sang</span>
+            </h1>
+            <div className="title-decoration"></div>
+          </div>
+          <p className="header-subtitle">
+            <span className="role">Full-Stack Developer</span>
+            <span className="separator">•</span>
+            <span className="passion">Crafting Digital Experiences</span>
+          </p>
+          <p className="header-description">
+            Passionate about building elegant solutions that bridge creativity and technology,
+            turning complex problems into beautiful, user-friendly applications.
+          </p>
+          <div className="header-cta">
+            <button 
+              className="cta-primary"
+              onClick={() => scrollToSection(projectsRef)}
+            >
+              View My Work
+            </button>
+            <button 
+              className="cta-secondary"
+              onClick={() => scrollToSection(contactRef)}
+            >
+              Get In Touch
+            </button>
+          </div>
+        </div>
+        <div className="header-bg-elements">
+          <div className="floating-element element-1"></div>
+          <div className="floating-element element-2"></div>
+          <div className="floating-element element-3"></div>
+        </div>
       </header>
 
       <div id="about" className="section about" ref={aboutRef}>
         <div data-aos="fade-up">
           <h2>About Me</h2>
-          <img src={profileImage} alt="Profile" className="profile-pic" />
-          <p style={{ marginBottom: "20px" }}>
-            Welcome to my portfolio! My interest in technology began in high
-            school with <strong>Computer Science</strong>, leading me to pursue my
-            studies at <strong>York University</strong>. I have experience with{" "}
-            various <strong>programming languages, frameworks, and tools</strong> such
-            as <strong>JavaScript, Java, React, Angular, and Node.js</strong>.
-            My projects reflect my enthusiasm for creating user-centric
-            applications that solve real-world problems, from personalized
-            wellness trackers to dynamic e-commerce platforms.
-          </p>
-          <p style={{ marginBottom: "20px" }}>
-            I’m always excited to explore <strong>new technologies</strong> and
-            improve my skills. I enjoy tackling challenges that push me to think{" "}
-            <strong>critically and creatively</strong> and love collaborating
-            with others who share a passion for technology.
-          </p>
+          <div className="about-layout">
+            <div className="about-image">
+              <img src={profileImage} alt="Profile" className="profile-pic" />
+            </div>
+            <div className="text-card">
+              <p>
+                Welcome to my portfolio! My interest in technology began in high
+                school with <strong>Computer Science</strong>, leading me to pursue my
+                studies at <strong>York University</strong>. I have experience with{" "}
+                various <strong>programming languages, frameworks, and tools</strong> such
+                as <strong>JavaScript, Java, React, Angular, and Node.js</strong>.
+                My projects reflect my enthusiasm for creating user-centric
+                applications that solve real-world problems, from personalized
+                wellness trackers to dynamic e-commerce platforms.
+              </p>
+              <p style={{ marginTop: "1.5rem" }}>
+                I'm always excited to explore <strong>new technologies</strong> and
+                improve my skills. I enjoy tackling challenges that push me to think{" "}
+                <strong>critically and creatively</strong> and love collaborating
+                with others who share a passion for technology.
+              </p>
+              <a
+                href={`${process.env.PUBLIC_URL}/Christina-Piang-Sang-Resume.pdf`}
+                download="Christina-Piang-Sang-Resume.pdf"
+                className="cta-primary"
+                style={{ marginTop: "2rem", display: "inline-block", textDecoration: "none" }}
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -697,6 +808,7 @@ function App() {
           </div>
         </div>
       </div>
+      
       {showBackToTop && (
         <button
           onClick={() => scrollToSection({ current: document.body })}
