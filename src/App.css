@@ -537,6 +537,18 @@ nav .theme-toggle:hover::before {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* Light mode: more visible border and subtle background */
+.light-mode .cta-secondary {
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  color: var(--text);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.light-mode .cta-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.12);
+}
+
 .cta-secondary::before {
   content: '';
   position: absolute;
@@ -558,6 +570,10 @@ nav .theme-toggle:hover::before {
 }
 
 .cta-secondary:hover::before {
+  opacity: 1;
+}
+
+.light-mode .cta-secondary:hover::before {
   opacity: 1;
 }
 
