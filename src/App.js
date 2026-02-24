@@ -611,7 +611,7 @@ function App() {
               </p>
               <a
                 href={`${process.env.PUBLIC_URL}/Christina-Piang-Sang-Resume.pdf`}
-                download="Christina-Piang-Sang-Resume.pdf"
+                download="Christina Piang Sang - Resume.pdf"
                 className="cta-primary"
                 style={{ marginTop: "2rem", display: "inline-block", textDecoration: "none" }}
               >
