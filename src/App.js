@@ -609,14 +609,6 @@ function App() {
                 <strong>critically and creatively</strong> and love collaborating
                 with others who share a passion for technology.
               </p>
-              <a
-                href={`${process.env.PUBLIC_URL}/Christina-Piang-Sang-Resume.pdf`}
-                download="Christina Piang Sang - Resume.pdf"
-                className="cta-primary"
-                style={{ marginTop: "2rem", display: "inline-block", textDecoration: "none" }}
-              >
-                Download Resume
-              </a>
             </div>
           </div>
         </div>
